@@ -1,0 +1,45 @@
+.modal-drop-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.modal-drop-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 300ms ease-out;
+}
+.modal-drop-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal-drop-exit-active {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 300ms ease-in;
+}
+
+.awssld__arrow {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  color: white;
+  z-index: 10;
+}
+
+.awssld__arrow--left {
+  left: 8px !important;
+}
+
+.awssld__arrow--right {
+  right: 8px !important;
+}
+
+.cert-slider .awssld__content img {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100% !important;
+}
