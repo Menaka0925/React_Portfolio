@@ -1,5 +1,4 @@
 import React from 'react';
-import profileImg from '../assets/menaka.jpg';
 import { FaReact, FaNodeJs, FaHtml5 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
@@ -47,7 +46,7 @@ const About = () => {
           >
             <div className="bg-white dark:bg-white/10 shadow-xl border border-gray-300 dark:border-white/20 rounded-md px-4 pt-4 pb-6 text-center w-[270px]">
               <img
-                src={profileImg}
+                src= "/menaka.jpg"
                 alt="Menaka M"
                 className="w-full h-[260px] object-cover rounded"
               />
