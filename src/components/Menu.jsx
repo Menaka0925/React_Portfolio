@@ -85,7 +85,9 @@ const Menu = () => {
 
       <div className="relative w-full flex items-center justify-center max-w-[95vw] md:max-w-[70vw] mx-auto px-1 overflow-visible">
         <div className="flex-grow relative overflow-x-auto no-scrollbar">
-          <ul className="flex items-center bg-white/70 dark:bg-gray-800/80 cursor-pointer backdrop-blur-md shadow-lg rounded-full relative px-1 py-1 min-h-[46px] w-fit mx-auto">
+<ul className="flex items-center bg-white/70 dark:bg-gray-800/80 
+  cursor-pointer backdrop-blur-md shadow-lg rounded-full 
+  relative px-2 py-2 min-h-[50px] w-fit mx-auto overflow-hidden">
             <div
               className="absolute top-1/2 left-0 w-[40px] h-[40px] rounded-full bg-[#A35C7A] dark:bg-[#C890A7] z-10 transition-transform duration-300 transform -translate-y-1/2"
               style={{

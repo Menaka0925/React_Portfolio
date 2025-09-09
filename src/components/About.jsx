@@ -3,12 +3,12 @@ import { FaReact, FaNodeJs, FaHtml5 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0, 
     transition: { 
-      duration: 0.5, 
+      duration: 0.6, 
       ease: 'easeOut' 
     } 
   },
@@ -18,13 +18,13 @@ const About = () => {
   return (
     <section
       id="about"
-      className="pt-20 pb-24 px-6 bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 overflow-x-hidden"
+      className="pt-20 pb-20 px-6 bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 overflow-x-hidden"
     >
       <motion.div
         className="max-w-6xl mx-auto"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={fadeInUp}
       >
         <h2 className="text-4xl font-bold text-center mb-2 text-[#A35C7A] dark:text-[#C890A7]">

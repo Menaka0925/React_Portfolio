@@ -145,8 +145,8 @@ const Certify = () => {
       className="bg-white dark:bg-black flex flex-col justify-center items-center px-4 py-12"
     >
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-[#A35C7A] dark:text-[#D9B7C2] mb-3"
-        variants={fadeInUp}
+className="text-center text-3xl md:text-4xl font-bold 
+             text-[#A35C7A] dark:text-[#D9B7C2] mb-3"        variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -173,7 +173,7 @@ const Certify = () => {
           className="z-40 absolute left-10 top-[48%] -translate-y-1/2 p-2 md:p-3 rounded-full bg-[#A35C7A] text-white dark:bg-[#D9B7C2] dark:text-gray-900"
           aria-label="Previous certificate"
         >
-          <GrCaretPrevious size={26} />
+          <GrCaretPrevious size={20} />
         </button>
 
         <div className="relative w-full" style={{ height: 320 }}>
@@ -262,7 +262,7 @@ const Certify = () => {
           className="z-40 absolute right-10 top-[48%] -translate-y-1/2 p-2 md:p-3 rounded-full bg-[#A35C7A] text-white dark:bg-[#D9B7C2] dark:text-gray-900"
           aria-label="Next certificate"
         >
-          <GrCaretNext size={26} />
+          <GrCaretNext size={20} />
         </button>
       </div>
 
@@ -317,7 +317,7 @@ const Certify = () => {
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`w-4 h-4 rounded-full border-2 cursor-pointer border-[#A35C7A] dark:border-[#D9B7C2] focus:outline-none transition ${
+              className={`w-3 h-3 rounded-full border-2 cursor-pointer border-[#A35C7A] dark:border-[#D9B7C2] focus:outline-none transition ${
                 currentIndex === idx
                   ? "bg-[#A35C7A] dark:bg-[#D9B7C2]"
                   : "bg-transparent"
