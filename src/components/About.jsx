@@ -3,14 +3,11 @@ import { FaReact, FaNodeJs, FaHtml5 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 40 },
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { 
-      duration: 0.6, 
-      ease: 'easeOut' 
-    } 
+    transition: { duration: 0.5, ease: 'easeOut' } 
   },
 };
 
@@ -18,35 +15,40 @@ const About = () => {
   return (
     <section
       id="about"
-      className="pt-20 pb-20 px-6 bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 overflow-x-hidden"
+      className="pt-20 pb-32 px-6 bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 overflow-x-hidden"
     >
-      <motion.div
-        className="max-w-6xl mx-auto"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={fadeInUp}
-      >
-        <h2 className="text-4xl font-bold text-center mb-2 text-[#A35C7A] dark:text-[#C890A7]">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* Heading */}
+        <motion.h2
+          className="text-4xl font-bold text-center mb-2 text-[#A35C7A] dark:text-[#C890A7]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+        >
           Behind the Code
-        </h2>
-        <p className="text-center text-sm font-medium mb-12 text-[#7f5a6b] dark:text-white tracking-wide">
+        </motion.h2>
+
+        {/* Tagline */}
+        <motion.p
+          className="text-center text-sm font-medium mb-12 text-[#7f5a6b] dark:text-white tracking-wide"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+          transition={{ delay: 0.15 }} // slight delay for stagger
+        >
           Crafting elegant solutions, one line of code at a time.
-        </p>
+        </motion.p>
 
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
 
-          <motion.div
-            className="flex justify-center md:w-1/3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-            transition={{ delay: 0.15 }}
-          >
+          {/* Profile card */}
+          <div className="flex justify-center md:w-1/3">
             <div className="bg-white dark:bg-white/10 shadow-xl border border-gray-300 dark:border-white/20 rounded-md px-4 pt-4 pb-6 text-center w-[270px]">
               <img
-                src= "/menaka.jpg"
+                src="/menaka.jpg"
                 alt="Menaka M"
                 className="w-full h-[260px] object-cover rounded"
               />
@@ -56,17 +58,10 @@ const About = () => {
                 <FaNodeJs />
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="w-full mt-4 md:w-2/3 bg-gray-50 dark:bg-gray-900 rounded-md shadow-md border border-gray-200 dark:border-gray-700"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-            transition={{ delay: 0.3 }}
-          >
-
+          {/* About text card */}
+          <div className="w-full mt-4 md:w-2/3 bg-gray-50 dark:bg-gray-900 rounded-md shadow-md border border-gray-200 dark:border-gray-700">
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-200 dark:bg-gray-800 border-b border-gray-300 dark:border-gray-700 rounded-t-md">
               <span className="w-3 h-3 bg-red-500 rounded-full" />
               <span className="w-3 h-3 bg-yellow-400 rounded-full" />
@@ -90,9 +85,10 @@ const About = () => {
                 and always excited to solve real-world problems through code.
               </p>
             </div>
-          </motion.div>
+          </div>
+
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

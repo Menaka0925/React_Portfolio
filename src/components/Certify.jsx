@@ -145,14 +145,17 @@ const Certify = () => {
       className="bg-white dark:bg-black flex flex-col justify-center items-center px-4 py-12"
     >
       <motion.h2
-className="text-center text-3xl md:text-4xl font-bold 
-             text-[#A35C7A] dark:text-[#D9B7C2] mb-3"        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        Professional Credentials
-      </motion.h2>
+      className="text-center font-bold 
+                text-[#A35C7A] dark:text-[#D9B7C2] mb-3 
+                whitespace-nowrap text-[clamp(1.2rem,4vw,2rem)]"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      Professional Credentials
+    </motion.h2>
+
       <motion.p
         className="text-center text-sm font-medium mb-5 text-[#7f5a6b] dark:text-white tracking-wide"
         variants={fadeInUp}

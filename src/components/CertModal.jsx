@@ -12,6 +12,7 @@ const CertModal = ({ isOpen, onRequestClose, images, startIndex }) => {
   const [showContent, setShowContent] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(startIndex || 0);
 
+  // Prevent body scroll + reset modal state
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"; 
@@ -26,6 +27,13 @@ const CertModal = ({ isOpen, onRequestClose, images, startIndex }) => {
     };
   }, [isOpen, startIndex]);
 
+  // 🔹 Preload all images for smoother next/prev navigation
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [images]);
 
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length);
   const prevSlide = () =>
@@ -52,7 +60,7 @@ const CertModal = ({ isOpen, onRequestClose, images, startIndex }) => {
   };
 
   return (
-   <Modal
+    <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       className="w-full max-w-[950px] mx-auto bg-transparent border-none outline-none"
@@ -73,12 +81,13 @@ const CertModal = ({ isOpen, onRequestClose, images, startIndex }) => {
           </div>
           <button
             onClick={onRequestClose}
-            className="text-gray-600 dark:text-gray-300 hover:text-red-500  dark:hover:text-red-500"
+            className="text-gray-600 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-500"
           >
             <FaTimes size={20} />
           </button>
         </div>
 
+        {/* Desktop slider */}
         <div className="hidden sm:flex w-full h-[70vh] sm:h-[80vh] mx-auto rounded-b-md items-center justify-center">
           <AwesomeSlider
             {...sliderProps}
@@ -87,6 +96,7 @@ const CertModal = ({ isOpen, onRequestClose, images, startIndex }) => {
           />
         </div>
 
+        {/* Mobile view with manual navigation */}
         <div className="sm:hidden w-full flex flex-col">
           <div className="flex-1 min-h-0 flex items-stretch justify-center" style={{ height: '60vh' }}>
             <img

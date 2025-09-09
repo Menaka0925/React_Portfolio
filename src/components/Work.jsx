@@ -89,6 +89,15 @@ const Work = () => {
   };
 }, [selectedPub]);
 
+useEffect(() => {
+  publications.forEach((pub) => {
+    if (pub.imgSrc) {
+      const img = new Image();
+      img.src = pub.imgSrc;
+    }
+  });
+}, []);
+
   return (
     <section
       id="experience"

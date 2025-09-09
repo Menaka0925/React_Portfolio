@@ -77,7 +77,6 @@ const ProjectModal = ({ isOpen, onRequestClose, data }) => {
               bullets={false}
               animation="scaleOutAnimation"
               organicArrows={images.length > 1}
-              cssModule={[]}
               className="w-full h-full"
             >
               {images.map((src, idx) => (

@@ -14,7 +14,6 @@ const navItems = [
   { icon: MdVerified, to: "certify" },
 ];
 
-const navItemWidth = 64;
 
 const Menu = () => {
   const [active, setActive] = useState('home');
@@ -67,8 +66,6 @@ const Menu = () => {
     localStorage.setItem('theme', newMode ? 'dark' : 'light');
   };
 
-  const activeIndex = navItems.findIndex(i => i.to === active);
-
   return (
     <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full px-2">
       <div className="hidden md:block fixed top-5 right-6 z-50">
@@ -85,41 +82,40 @@ const Menu = () => {
 
       <div className="relative w-full flex items-center justify-center max-w-[95vw] md:max-w-[70vw] mx-auto px-1 overflow-visible">
         <div className="flex-grow relative overflow-x-auto no-scrollbar">
-<ul className="flex items-center bg-white/70 dark:bg-gray-800/80 
-  cursor-pointer backdrop-blur-md shadow-lg rounded-full 
-  relative px-2 py-2 min-h-[50px] w-fit mx-auto overflow-hidden">
-            <div
-              className="absolute top-1/2 left-0 w-[40px] h-[40px] rounded-full bg-[#A35C7A] dark:bg-[#C890A7] z-10 transition-transform duration-300 transform -translate-y-1/2"
-              style={{
-                transform: `translateX(${activeIndex * navItemWidth + 16}px) translateY(-50%)`,
-              }}
-            />
-
-            {navItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = active === item.to;
-              return (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  smooth
-                  duration={500}
-                  offset={-70}
-                  onClick={() => setActive(item.to)}
-                  className="relative z-20 min-w-[64px] flex items-center justify-center"
-                >
-                  <div className="w-[40px] h-[40px] flex items-center justify-center">
-                    <Icon
-                      size={22}
-                      className={`transition-colors duration-300 ${
-                        isActive ? 'text-white' : 'text-gray-800 dark:text-white'
-                      }`}
-                    />
-                  </div>
-                </Link>
-              );
-            })}
-          </ul>
+       <ul className="flex items-center justify-between
+               bg-white/70 dark:bg-gray-800/80
+               cursor-pointer backdrop-blur-md shadow-lg
+               rounded-full relative px-2 py-2 min-h-[55px]
+               w-full max-w-[500px] mx-auto overflow-hidden"
+        >
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = active === item.to;
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                smooth
+                duration={500}
+                offset={-70}
+                onClick={() => setActive(item.to)}
+                className="relative flex-1 flex items-center justify-center"
+              >
+                <div className="relative w-[44px] h-[44px] flex items-center justify-center">
+                  {isActive && (
+                    <div className="absolute inset-0 w-full h-full rounded-full bg-[#A35C7A] dark:bg-[#C890A7] z-0" />
+                  )}
+                  <Icon
+                    size={22}
+                    className={`relative z-10 transition-colors duration-300 ${
+                      isActive ? "text-white" : "text-gray-800 dark:text-white"
+                    }`}
+                  />
+                </div>
+              </Link>
+            );
+          })}
+        </ul>
         </div>
       </div>
 
