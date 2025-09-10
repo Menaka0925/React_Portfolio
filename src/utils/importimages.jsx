@@ -1,5 +1,13 @@
 export const importAll = (images) => {
-  return Object.values(images);
+  return Object.entries(images)
+    .sort(([a], [b]) => {
+      const getNum = (str) => {
+        const match = str.match(/\((\d+)\)/);
+        return match ? parseInt(match[1], 10) : 0;
+      };
+      return getNum(a) - getNum(b);
+    })
+    .map(([, value]) => value);
 };
 
 export const cyberImg = importAll(

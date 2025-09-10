@@ -99,10 +99,10 @@ const Hero = () => {
   }, [charIndex, isDeleting, textIndex]);
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center text-left px-6 bg-[#e9d5a1] text-black dark:bg-black dark:text-white transition-colors duration-300 pt-32 md:pt-0"
-    >
+      <section
+        id="home"
+        className="min-h-screen flex flex-col md:flex-row items-center justify-center text-left px-6 bg-[#e9d5a1] text-black dark:bg-black dark:text-white transition-colors duration-300 pt-32 md:pt-0 pb-12 md:pb-0"
+      >
       <motion.div
         className="flex-1 max-w-xl"
         initial="hidden"
@@ -202,7 +202,10 @@ const Hero = () => {
               >
                 {item.icon}
               </a>
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+              <div
+                className="absolute top-full mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10
+                          left-6 sm:left-1/2 sm:-translate-x-1/2"
+              >
                 <div className="relative bg-[#A35C7A] text-white text-xs md:text-sm px-4 py-2 rounded-lg shadow-md font-medium whitespace-nowrap">
                   {item.label}
                   <div

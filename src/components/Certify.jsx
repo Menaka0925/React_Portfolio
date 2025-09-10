@@ -147,7 +147,7 @@ const Certify = () => {
       <motion.h2
       className="text-center font-bold 
                 text-[#A35C7A] dark:text-[#D9B7C2] mb-3 
-                whitespace-nowrap text-[clamp(1.2rem,4vw,2rem)]"
+                whitespace-nowrap text-[clamp(1.3rem,4vw,2rem)]"
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
@@ -337,14 +337,14 @@ const Certify = () => {
             className="p-2 rounded-full bg-[#A35C7A] text-white dark:bg-[#D9B7C2] dark:text-gray-900"
             aria-label="Previous certificate"
           >
-            <GrCaretPrevious size={24} />
+            <GrCaretPrevious size={20} />
           </button>
           <button
             onClick={handleNext}
             className="p-2 rounded-full bg-[#A35C7A] text-white dark:bg-[#D9B7C2] dark:text-gray-900"
             aria-label="Next certificate"
           >
-            <GrCaretNext size={24} />
+            <GrCaretNext size={20} />
           </button>
         </div>
       </div>
