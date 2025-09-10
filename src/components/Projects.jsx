@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ProjectModal from './ProjectModal';
-import { cyberImg, chatImg, notesImg, projectImg, analyticsImg, ticketImg, loanImg, quizImg } from "../utils/importimages";
+import { cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg, quizImg } from "../components/importimages";
 import portfolioImg from '../assets/pro_img/portfolio.jpg';
 
 import { motion } from 'framer-motion';
