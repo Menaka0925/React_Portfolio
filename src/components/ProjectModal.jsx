@@ -4,7 +4,6 @@ import { FaTimes } from 'react-icons/fa';
 import { RxExternalLink } from "react-icons/rx";
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import 'react-awesome-slider/dist/custom-animations/scale-out-animation.css';
 import '../modal-animations.css';
 
 const ProjectModal = ({ isOpen, onRequestClose, data }) => {
@@ -22,6 +21,15 @@ const ProjectModal = ({ isOpen, onRequestClose, data }) => {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen && data?.images) {
+      data.images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    }
+  }, [isOpen, data]);
 
   if (!data) return null;
   const { title, description, url, technologies, images } = data;
@@ -56,13 +64,16 @@ const ProjectModal = ({ isOpen, onRequestClose, data }) => {
 
           <div className="w-full h-[220px] sm:h-[320px] md:h-[360px] rounded-md overflow-hidden bg-black/5">
             <AwesomeSlider
+              key={title}  
               bullets={false}
-              animation="scaleOutAnimation"
               organicArrows={images.length > 1}
               className="w-full h-full"
             >
               {images.map((src, idx) => (
-                <div key={idx} className="flex items-center justify-center w-full h-full bg-white dark:bg-black">
+                <div 
+                  key={idx} 
+                  className="flex items-center justify-center w-full h-full bg-white dark:bg-black"
+                >
                   <img
                     src={src}
                     alt={`Slide ${idx}`}
