@@ -26,31 +26,13 @@ const ProjectModal = ({ isOpen, onRequestClose, data }) => {
   if (!data) return null;
   const { title, description, url, technologies, images } = data;
 
-  const sliderProps = {
-    animation: 'scaleOutAnimation',
-    bullets: false,
-    className: 'rounded-md',
-    media: images.map((src) => ({
-      source: src,
-      style: {
-        objectFit: 'contain',
-        height: '100%',
-        width: '100%',
-      },
-    })),
-  };
-
-  if (images.length <= 1) {
-    sliderProps.organicArrows = false;
-  }
-
   return (
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={onRequestClose}
-        className="w-full max-w-[860px] mx-auto bg-transparent border-none outline-none"
-        overlayClassName="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50"
-      >
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
+      className="w-full max-w-[860px] mx-auto bg-transparent border-none outline-none"
+      overlayClassName="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50"
+    >
       <div
         className={`transition-all duration-500 transform ${
           showContent ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
@@ -60,7 +42,7 @@ const ProjectModal = ({ isOpen, onRequestClose, data }) => {
 
         <button
           onClick={onRequestClose}
-          className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 hover:text-red-500  dark:hover:text-red-500 z-50"
+          className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-500 z-50"
         >
           <FaTimes size={22} />
         </button>
@@ -72,7 +54,7 @@ const ProjectModal = ({ isOpen, onRequestClose, data }) => {
             <span className="w-3 h-3 bg-green-500 rounded-full" />
           </div>
 
-          <div className="w-full h-[220px] sm:h-[320px] md:h-[360px] rounded-md overflow-hidden flex items-center justify-center bg-black/5">
+          <div className="w-full h-[220px] sm:h-[320px] md:h-[360px] rounded-md overflow-hidden bg-black/5">
             <AwesomeSlider
               bullets={false}
               animation="scaleOutAnimation"
@@ -80,7 +62,7 @@ const ProjectModal = ({ isOpen, onRequestClose, data }) => {
               className="w-full h-full"
             >
               {images.map((src, idx) => (
-                <div key={idx} className="flex items-center justify-center w-full h-full">
+                <div key={idx} className="flex items-center justify-center w-full h-full bg-white dark:bg-black">
                   <img
                     src={src}
                     alt={`Slide ${idx}`}
