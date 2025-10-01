@@ -156,7 +156,7 @@ const Hero = () => {
             <br />
             <span className="text-pink-400">const</span> resume ={" "}
             <motion.a
-              href="https://drive.google.com/file/d/1QJJP0QbKdgz5_-YW28aBQASZ3mVKt4sz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1wUNjeJPTh7hombRmtHDXqMMWkm4UC85Z/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-300 hover:text-blue-400 underline"
