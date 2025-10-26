@@ -3,30 +3,39 @@ import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import CertModal from "./CertModal";
 import { motion } from 'framer-motion';
 
-import certImg1 from "../assets/cert_img/IBM-FT.jpg";
-import certImg2 from "../assets/cert_img/ibm-js.jpg";
-import certImg3 from "../assets/cert_img/NPTEL_certify.jpg";
-import certImg4 from "../assets/cert_img/NullClass.png";
-import certImg5 from "../assets/cert_img/intern.jpg";
-import certImg6 from "../assets/cert_img/Deloite_certify.jpg";
-import certImg7 from "../assets/cert_img/Ai certify.png";
-import certImg8 from "../assets/cert_img/Guvi.png";
-import certImg9 from "../assets/cert_img/mern.png";
-import certImg10 from "../assets/cert_img/powerbi.png";
-import certImg11 from "../assets/cert_img/rweb.png";
-import certImg12 from "../assets/cert_img/javascript.png";
+import certImg13 from "../assets/cert_img/IBM-FT.jpg";
+import certImg12 from "../assets/cert_img/Adroit_intern.jpg"
+import certImg11 from "../assets/cert_img/ibm-js.jpg";
+import certImg10 from "../assets/cert_img/NPTEL_certify.jpg";
+import certImg9 from "../assets/cert_img/NullClass.png";
+import certImg8 from "../assets/cert_img/intern.jpg";
+import certImg7 from "../assets/cert_img/Deloite_certify.jpg";
+import certImg6 from "../assets/cert_img/Ai certify.png";
+import certImg5 from "../assets/cert_img/Guvi.png";
+import certImg4 from "../assets/cert_img/mern.png";
+import certImg3 from "../assets/cert_img/powerbi.png";
+import certImg2 from "../assets/cert_img/rweb.png";
+import certImg1 from "../assets/cert_img/javascript.png";
 
 const certData = [
   {
-    image: certImg1,
+    image: certImg13,
     title: "Frontend Technologies",
     subtitle1: "Certified by:",
     content1: "IBM",
     subtitle2: "Description:",
-    content2: "1-Month Course on Frontend Technologies",
+    content2: "Completed a course on Frontend Technologies covering JavaScript, jQuery, AngularJS, and ReactJS",
   },
   {
-    image: certImg2,
+    image: certImg12,
+    title: "Full Stack Development Internship",
+    subtitle1: "Certified by:",
+    content1: "Adroit Technologies Innovative Solutions Pvt Ltd",
+    subtitle2: "Description:",
+    content2: "1-Month FullStack Development intern focused on building and deploying web applications",
+  },
+  {
+    image: certImg11,
     title: "Fundamentals of JavaScript",
     subtitle1: "Certified by:",
     content1: "IBM CognitiveClass",
@@ -34,7 +43,7 @@ const certData = [
     content2: "Fundamentals of JavaScript",
   },
   {
-    image: certImg3,
+    image: certImg10,
     title: "Web Technology",
     subtitle1: "Certified by:",
     content1: "NPTEL",
@@ -42,7 +51,7 @@ const certData = [
     content2: "Learned web basics and advanced topics",
   },
   {
-    image: certImg4,
+    image: certImg9,
     title: "Power BI",
     subtitle1: "Certified by:",
     content1: "NullClass",
@@ -50,7 +59,7 @@ const certData = [
     content2: "Data visualization with Power BI",
   },
   {
-    image: certImg5,
+    image: certImg8,
     title: "Web Development",
     subtitle1: "Certified by:",
     content1: "CodeBind Technologies",
@@ -58,7 +67,7 @@ const certData = [
     content2: "Developed real-time websites",
   },
   {
-    image: certImg6,
+    image: certImg7,
     title: "Software Technologies",
     subtitle1: "Certified by:",
     content1: "Deloitte Australia",
@@ -66,7 +75,7 @@ const certData = [
     content2: "Technology Job Simulation (Forage)",
   },
   {
-    image: certImg7,
+    image: certImg6,
     title: "AI Tools",
     subtitle1: "Certified by:",
     content1: "be10X",
@@ -74,7 +83,7 @@ const certData = [
     content2: "Fundamentals of Artificial Intelligence",
   },
   {
-    image: certImg8,
+    image: certImg5,
     title: "Learnathon",
     subtitle1: "Certified by:",
     content1: "GUVI",
@@ -82,7 +91,7 @@ const certData = [
     content2: "Participated in SAWIT.AI Learnathon",
   },
   {
-    image: certImg9,
+    image: certImg4,
     title: "MERN Stack Training",
     subtitle1: "Certified by:",
     content1: "Great Learning",
@@ -90,7 +99,7 @@ const certData = [
     content2: "Fundamentals of MongoDB, Express, React, Node",
   },
   {
-    image: certImg10,
+    image: certImg3,
     title: "Power BI",
     subtitle1: "Certified by:",
     content1: "Great Learning",
@@ -98,7 +107,7 @@ const certData = [
     content2: "Data Visualization with Power BI",
   },
   {
-    image: certImg11,
+    image: certImg2,
     title: "Responsive Web Design",
     subtitle1: "Certified by:",
     content1: "freeCodeCamp",
@@ -106,7 +115,7 @@ const certData = [
     content2: "HTML, CSS, and Flexbox Projects",
   },
   {
-    image: certImg12,
+    image: certImg1,
     title: "JavaScript Algorithms and Data Structures",
     subtitle1: "Certified by:",
     content1: "freeCodeCamp",
@@ -227,7 +236,7 @@ const Certify = () => {
                       </h2>
                       <div className="text-sm font-semibold">{cert.subtitle1}</div>
                       <div className="text-sm">{cert.content1}</div>
-                      <div className="text-sm font-semibold mt-2">{cert.subtitle2}</div>
+                      <div className="text-sm font-semibold">{cert.subtitle2}</div>
                       <div className="text-sm">{cert.content2}</div>
                     </div>
 

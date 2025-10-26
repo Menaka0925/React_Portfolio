@@ -74,7 +74,7 @@ const About = () => {
               </p>
               <p className="mt-4">
                 I’m <span className="font-semibold text-black dark:text-white">Menaka M</span>, 
-                a 2025 B.E. graduate in Computer Science Engineering with 7.9 CGPA.
+                a 2025 B.E. graduate in Computer Science Engineering with 7.81 CGPA.
                 I’m passionate about learning, exploring new technologies, 
                 and turning ideas into impactful digital experiences.
               </p>

@@ -8,14 +8,24 @@ import certImg2 from "../assets/pub_img/journal.jpg";
 
 // Work data
 const workData = [
-  {
+    {
     title: "Frontend Technologies Intern",
     company: "IBM",
     duration: "Mar – May 2025",
+    stack: ["JavaScript", "React", "Angular", "WordPress"],
+    details: [
+      "Completed modules on React JS and Directives, DOM, and Views, gaining practical experience in building responsive front-end components.",
+      "Explored basic to intermediate topics including JavaScript, jQuery, and AngularJS, and received exposure to WordPress for UI development."
+    ],
+  },
+  {
+    title: "Full Stack Development Intern",
+    company: "Adroit Technologies Innovative Solutions Pvt Ltd",
+    duration: "Mar – Apr 2025",
     stack: ["MERN Stack"],
     details: [
-      "Hands-on training in React.js, Node.js, Express.js, and MongoDB.",
-      "Exposure to Python and PHP for backend integration.",
+      "Completed a 1-month internship in Full Stack Development, gaining hands-on experience in building and deploying web applications using modern frameworks.",
+      "Enhanced technical skills across front-end and back-end development while adhering to best practices and ensuring code efficiency."
     ],
   },
   {
