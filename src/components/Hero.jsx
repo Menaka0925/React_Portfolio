@@ -151,24 +151,36 @@ const Hero = () => {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
-          <pre className="text-gray-300">
-            <span className="text-green-400">// Want to know more?</span>
-            <br />
-            <span className="text-pink-400">const</span> resume ={" "}
-            <motion.a
-              href="https://drive.google.com/file/d/1ywkzmenIPN0Sdv0T0imuVo-7Jm9qxtam/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-300 hover:text-blue-400 underline"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              "View Resume"
-            </motion.a>
-            ;
-          </pre>
+        <pre className="text-gray-300">
+          <span className="text-green-400">// Want to know more?</span>
+          <br />
+          <span className="text-pink-400">const</span> resume ={" "}
+          <motion.a
+            href="https://drive.google.com/file/d/1ywkzmenIPN0Sdv0T0imuVo-7Jm9qxtam/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-300 hover:text-blue-400 underline"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            "View Resume"
+          </motion.a>
+          ;
+          <br />
+          <span className="text-pink-400">const</span> cv ={" "}
+          <motion.a
+            href="https://drive.google.com/file/d/1Ep54kv1zwB4W5RRCAuzsHD67OesWY9xT/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-300 hover:text-blue-400 underline"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            "View CV"
+          </motion.a>
+          ;
+        </pre>
         </motion.div>
-
         <div className="flex gap-6 mt-12 text-2xl md:text-3xl lg:text-4xl text-[#A35C7A] dark:text-[#C890A7]">
           {[
             {
