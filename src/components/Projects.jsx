@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ProjectModal from './ProjectModal';
-import { cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg, quizImg } from "../components/importimages";
+import { searchImg, cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg, quizImg } from "../components/importimages";
 import portfolioImg from '../assets/pro_img/portfolio.jpg';
 
 import { motion } from 'framer-motion';
@@ -8,12 +8,21 @@ import { motion } from 'framer-motion';
 const categories = ['All', 'Web Development', 'AIML', 'Analytics', 'React'];
 
 const allProjects = [
+    {
+    title: 'Image Search Web App',
+    category: 'React',
+    description:
+      'Developed a full-stack responsive image search application integrating Unsplash API for fetching high-quality images. Implemented secure OAuth authentication via Google, GitHub, and Facebook using Passport.js. Designed an interactive frontend with React and Tailwind CSS featuring personalized search history and global trending search terms. Built backend APIs with Node.js, Express.js, and MongoDB for user data and search metadata management.',
+    url: 'https://github.com/Menaka0411/mern-image-search-app.git',
+    images: searchImg,
+    technologies: ['React', 'Node', 'Express', 'MongoDB', 'Unsplash API', 'OAuth' ],
+  },
   {
     title: 'Cyberbullying Detection on Social Media using Machine Learning ',
     category: 'React',
     description:
       'Extended a previously built React chat application by adding a Cyber Safe Mode feature to detect and block offensive messages in real-time using an ML-based text classification API. Included friendship checks to prevent harmful messages between non-friends and ensure safer communication.',
-    url: 'https://github.com/Menaka0411',
+    url: 'https://github.com/Menaka0411/React_Chat_App.git',
     images: cyberImg,
     technologies: ['React', 'Node', 'Express', 'MongoDB', 'Socket.io', 'Machine Learning'],
   },
@@ -22,7 +31,7 @@ const allProjects = [
     category: 'React',
     description:
       'Developed a real-time chat application using React, Node.js, Express, MongoDB, and Socket.io, offering instant messaging with real-time updates, ability to add new contacts and create groups, private and group message archiving, customizable settings, and a seamless user experience without page reloads.',
-    url: 'https://github.com/Menaka0411',
+    url: 'https://github.com/Menaka0411/React_Chat_App.git',
     images: chatImg,
     technologies: ['React', 'Node', 'Express', 'MongoDB', 'Socket.io'],
   },

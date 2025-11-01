@@ -1,3 +1,12 @@
+import Img0 from "../assets/pro_img/Image/Img0.png"
+import Img1 from "../assets/pro_img/Image/Img1.png"
+import Img2 from "../assets/pro_img/Image/Img2.png"
+import Img3 from "../assets/pro_img/Image/Img3.png"
+import Img4 from "../assets/pro_img/Image/Img4.png"
+import Img5 from "../assets/pro_img/Image/Img5.png"
+import Img6 from "../assets/pro_img/Image/Img6.png"
+import Img7 from "../assets/pro_img/Image/Img7.png"
+
 import cyber1 from "../assets/pro_img/cyber/img1.jpg";
 import cyber2 from "../assets/pro_img/cyber/img2.png";
 import cyber3 from "../assets/pro_img/cyber/img3.png";
@@ -54,7 +63,7 @@ import quiz5 from "../assets/pro_img/quiz/img5.png";
 import quiz6 from "../assets/pro_img/quiz/img6.png";
 import quiz7 from "../assets/pro_img/quiz/img7.png";
 
-
+export const searchImg = [Img0, Img1, Img2, Img3, Img4, Img5, Img6, Img7];
 export const cyberImg = [cyber1, cyber2, cyber3, cyber4, cyber5, cyber6];
 export const chatImg = [chat1, chat2, chat3, chat4];
 export const notesImg = [note1, note2, note3, note4, note5, note6];
