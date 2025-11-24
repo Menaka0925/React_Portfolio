@@ -156,7 +156,7 @@ const Hero = () => {
           <br />
           <span className="text-pink-400">const</span> resume ={" "}
           <motion.a
-            href="https://drive.google.com/file/d/1ywkzmenIPN0Sdv0T0imuVo-7Jm9qxtam/view?usp=sharing"
+            href="https://drive.google.com/file/d/1BCp4hrAEtd5oqwGsIk4EoWFJnuteziQa/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-300 hover:text-blue-400 underline"
@@ -169,7 +169,7 @@ const Hero = () => {
           <br />
           <span className="text-pink-400">const</span> cv ={" "}
           <motion.a
-            href="https://drive.google.com/file/d/1Ep54kv1zwB4W5RRCAuzsHD67OesWY9xT/view?usp=sharing"
+            href="https://drive.google.com/file/d/1xtmHYOV67qqs8EjXmTTr-HKkAwiuPo3i/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-300 hover:text-blue-400 underline"

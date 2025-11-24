@@ -1,3 +1,17 @@
+import inv0 from "../assets/pro_img/invento/Img0.png";
+import inv1 from "../assets/pro_img/invento/Img1.png";
+import inv2 from "../assets/pro_img/invento/Img2.png";
+import inv3 from "../assets/pro_img/invento/Img3.png";
+import inv4 from "../assets/pro_img/invento/Img4.png";
+import inv5 from "../assets/pro_img/invento/Img5.png";
+import inv6 from "../assets/pro_img/invento/Img6.png";
+import inv7 from "../assets/pro_img/invento/Img7.png";
+import inv8 from "../assets/pro_img/invento/Img8.png";
+import inv9 from "../assets/pro_img/invento/Img9.png";
+import inv10 from "../assets/pro_img/invento/Img10.png";
+import inv11 from "../assets/pro_img/invento/Img11.png";
+import inv12 from "../assets/pro_img/invento/Img12.png";
+
 import Img0 from "../assets/pro_img/Image/Img0.png"
 import Img1 from "../assets/pro_img/Image/Img1.png"
 import Img2 from "../assets/pro_img/Image/Img2.png"
@@ -63,6 +77,7 @@ import quiz5 from "../assets/pro_img/quiz/img5.png";
 import quiz6 from "../assets/pro_img/quiz/img6.png";
 import quiz7 from "../assets/pro_img/quiz/img7.png";
 
+export const inventoImg = [inv0, inv1, inv2, inv3, inv4, inv5, inv6, inv7, inv8, inv9, inv10, inv11, inv12];
 export const searchImg = [Img0, Img1, Img2, Img3, Img4, Img5, Img6, Img7];
 export const cyberImg = [cyber1, cyber2, cyber3, cyber4, cyber5, cyber6];
 export const chatImg = [chat1, chat2, chat3, chat4];

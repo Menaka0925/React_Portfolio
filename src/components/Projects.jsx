@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import ProjectModal from './ProjectModal';
-import { searchImg, cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg, quizImg } from "../components/importimages";
+import { inventoImg, searchImg, cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg, quizImg } from "../components/importimages";
 import portfolioImg from '../assets/pro_img/portfolio.jpg';
 
 import { motion } from 'framer-motion';
 
-const categories = ['All', 'Web Development', 'AIML', 'Analytics', 'React'];
+const categories = ['All', 'Web', 'AIML', 'Analytics', 'React'];
 
 const allProjects = [
-    {
+  {
+    title: 'INVENTO – Inventory Manager',
+    category: 'Web',
+    description:
+      'Developed an offline inventory and billing web app using LocalStorage with CRUD operations, bulk item management, and auto PDF invoicing. Designed a responsive SCSS-based UI featuring sales analytics, expense tracking, and PWA-like offline performance.',
+    url: 'https://github.com/Menaka0411/inventory-manager.git',
+    images: inventoImg,
+    technologies: ['JavaScript', 'LocalStorage', 'SCSS', 'PWA'],
+  },
+  {
     title: 'Image Search Web App',
     category: 'React',
     description:
@@ -55,7 +64,7 @@ const allProjects = [
   },
   {
     title: 'Project Management System',
-    category: 'Web Development',
+    category: 'Web',
     description:
       'Created a Project Management System for college, enabling secure student and staff logins, project tracking, team creation, and mentor-student collaboration. The system includes dashboards for students to monitor projects and deadlines, and for staff to allocate mentors, provide feedback, and manage project timelines.',
     url: 'https://github.com/Menaka0411/Project_Management_System.git',
@@ -82,7 +91,7 @@ const allProjects = [
   },
   {
     title: 'Movie Ticket Booking System',
-    category: 'Web Development',
+    category: 'Web',
     description:
       'An online platform to browse movies, select seats, and securely book tickets.',
     url: 'https://github.com/Menaka0411/Movie_Ticket_Booking_System',
@@ -91,7 +100,7 @@ const allProjects = [
   },
   {
     title: 'Online Quiz',
-    category: 'Web Development',
+    category: 'Web',
     description:
       'A web-based quiz platform with score tracking, responsive design, and review features.',
     url: 'https://github.com/Menaka0411/Online_Quiz',
