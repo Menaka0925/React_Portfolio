@@ -48,7 +48,7 @@ const About = () => {
           <div className="flex justify-center md:w-1/3">
             <div className="bg-white dark:bg-white/10 shadow-xl border border-gray-300 dark:border-white/20 rounded-md px-4 pt-4 pb-6 text-center w-[270px]">
               <img
-                src="/menaka.jpg"
+                src="/Img1.png"
                 alt="Menaka M"
                 className="w-full h-[260px] object-cover rounded"
               />
