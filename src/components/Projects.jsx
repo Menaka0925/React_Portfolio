@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ProjectModal from './ProjectModal';
-import { inventoImg, searchImg, cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg, quizImg } from "../components/importimages";
+import { inventoImg, searchImg, cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg } from "../components/importimages";
 import portfolioImg from '../assets/pro_img/portfolio.jpg';
 
 import { motion } from 'framer-motion';
@@ -97,15 +97,6 @@ const allProjects = [
     url: 'https://github.com/Menaka0411/Movie_Ticket_Booking_System',
     images: ticketImg,
     technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    title: 'Online Quiz',
-    category: 'Web',
-    description:
-      'A web-based quiz platform with score tracking, responsive design, and review features.',
-    url: 'https://github.com/Menaka0411/Online_Quiz',
-    images: quizImg,
-    technologies: ['HTML', 'CSS', 'JavaScript'],
   },
 ];
 
