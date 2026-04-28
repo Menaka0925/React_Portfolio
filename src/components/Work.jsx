@@ -237,20 +237,20 @@ const Work = () => {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.85, opacity: 0, y: 40 }}
               transition={{ type: "spring", stiffness: 200, damping: 25 }}
-              className="bg-slate-950/80 backdrop-blur-2xl border border-sky-500/10 max-w-xl w-full rounded-xl p-10 relative shadow-[0_0_100px_rgba(56,189,248,0.08)]"
+              className="bg-slate-950/80 backdrop-blur-2xl border border-sky-500/10 max-w-xl w-full rounded-xl p-5 md:p-8 relative shadow-[0_0_100px_rgba(56,189,248,0.08)]"
               onClick={(e) => e.stopPropagation()}
             >
-              <button onClick={() => setSelectedWork(null)} className="absolute top-8 right-8 text-slate-600 hover:text-white transition-colors"><FaTimes size={16} /></button>
-
+              <button onClick={() => setSelectedWork(null)} className="absolute top-6 right-6 text-slate-600 hover:text-white transition-colors"><FaTimes size={16} /></button>
+              
               {/* Header */}
-              <div className="flex items-start gap-5 mb-8">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-xl font-black shrink-0 ${selectedWork.isCurrent ? "bg-sky-500 text-slate-950" : "bg-sky-500/10 text-sky-400 border border-sky-500/20"
+              <div className="flex items-start gap-4 mb-6">
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-lg font-black shrink-0 ${selectedWork.isCurrent ? "bg-sky-500 text-slate-950" : "bg-sky-500/10 text-sky-400 border border-sky-500/20"
                   }`}>
                   {selectedWork.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-white tracking-tight leading-tight">{selectedWork.title}</h3>
-                  <p className="text-sky-400 font-mono text-[10px] uppercase tracking-[0.3em] mt-1">{selectedWork.company}</p>
+                  <h3 className="text-lg font-black text-white tracking-tight leading-tight">{selectedWork.title}</h3>
+                  <p className="text-sky-400 font-mono text-[9px] uppercase tracking-[0.3em] mt-1">{selectedWork.company}</p>
                 </div>
               </div>
 
