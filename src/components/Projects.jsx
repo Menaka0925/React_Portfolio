@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import ProjectModal from './ProjectModal';
 import { inventoImg, searchImg, cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg } from "../components/importimages";
 import portfolioImg from '../assets/pro_img/portfolio.jpg';
-
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const categories = ['All', 'Web', 'AIML', 'Analytics', 'React'];
 
@@ -24,22 +24,22 @@ const allProjects = [
       'Developed a full-stack responsive image search application integrating Unsplash API for fetching high-quality images. Implemented secure OAuth authentication via Google, GitHub, and Facebook using Passport.js. Designed an interactive frontend with React and Tailwind CSS featuring personalized search history and global trending search terms. Built backend APIs with Node.js, Express.js, and MongoDB for user data and search metadata management.',
     url: 'https://github.com/Menaka0411/mern-image-search-app.git',
     images: searchImg,
-    technologies: ['React', 'Node', 'Express', 'MongoDB', 'Unsplash API', 'OAuth' ],
+    technologies: ['React', 'Node', 'Express', 'MongoDB', 'Unsplash API'],
   },
   {
-    title: 'Cyberbullying Detection on Social Media using Machine Learning ',
+    title: 'Cyberbullying Detection',
     category: 'React',
     description:
-      'Extended a previously built React chat application by adding a Cyber Safe Mode feature to detect and block offensive messages in real-time using an ML-based text classification API. Included friendship checks to prevent harmful messages between non-friends and ensure safer communication.',
+      'Extended a previously built React chat application by adding a Cyber Safe Mode feature to detect and block offensive messages in real-time using an ML-based text classification API. Included friendship checks to prevent harmful messages between non-friends.',
     url: 'https://github.com/Menaka0411/React_Chat_App.git',
     images: cyberImg,
-    technologies: ['React', 'Node', 'Express', 'MongoDB', 'Socket.io', 'Machine Learning'],
+    technologies: ['React', 'Node', 'Express', 'Socket.io', 'ML'],
   },
   {
-    title: 'React Chat Application',
+    title: 'React Real-Time Chat',
     category: 'React',
     description:
-      'Developed a real-time chat application using React, Node.js, Express, MongoDB, and Socket.io, offering instant messaging with real-time updates, ability to add new contacts and create groups, private and group message archiving, customizable settings, and a seamless user experience without page reloads.',
+      'Developed a real-time chat application using React, Node.js, Express, MongoDB, and Socket.io, offering instant messaging with real-time updates, ability to add new contacts and create groups.',
     url: 'https://github.com/Menaka0411/React_Chat_App.git',
     images: chatImg,
     technologies: ['React', 'Node', 'Express', 'MongoDB', 'Socket.io'],
@@ -48,19 +48,19 @@ const allProjects = [
     title: 'Collaborative Notes App',
     category: 'React',
     description:
-      'Developed a Collaborative Notes App with rich text editor, real-time sync, and permission-based sharing using React. The app evolved from a basic note-keeping tool using state and props to a fully interactive platform that enables users to create, edit, view, delete, and share notes.',
+      'Developed a Collaborative Notes App with rich text editor, real-time sync, and permission-based sharing using React. The app enables users to create, edit, view, delete, and share notes.',
     url: 'https://github.com/Menaka0411/Collaborative_Notes_App.git',
     images: notesImg,
     technologies: ['React', 'Node', 'Express', 'MongoDB'],
   },
   {
-    title: 'Portfolio Website',
+    title: 'Modern Professional Portfolio',
     category: 'React',
     description:
-      'My personal portfolio built using React and TailwindCSS. You are currently viewing it live.',
+      'An advanced, gamified professional portfolio featuring a 3D-perspective Quest Map, a custom terminal-inspired contact system, and a dedicated analytics engine. Built with a focus on high-end UI/UX, responsive architectural design, and real-time visitor interaction tracking via Google Sheets integration.',
     url: '',
     images: [portfolioImg],
-    technologies: ['React', 'TailwindCSS'],
+    technologies: ['React', 'Framer Motion', 'TailwindCSS', 'Google Apps Script', 'Analytics API'],
   },
   {
     title: 'Project Management System',
@@ -100,11 +100,6 @@ const allProjects = [
   },
 ];
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-};
-
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -128,68 +123,104 @@ const Projects = () => {
 
   const visibleProjects = filteredProjects.slice(0, visibleCount);
 
-  const handleTabChange = (cat) => {
-    setSelectedCategory(cat);
-    setVisibleCount(3);
-  };
-
   return (
-    <section id="projects" className="py-12 px-6 bg-white dark:bg-black transition-colors duration-300">
-      <div className="max-w-6xl mx-auto text-center">
-       <motion.h2
-          className="text-4xl font-bold mb-10 text-[#A35C7A] dark:text-[#C890A7]"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+    <section id="projects" className="pt-24 pb-16 px-6 bg-[#020617] relative">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          Showcase
-        </motion.h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Project <span className="text-gradient">Showcase</span>
+          </h2>
+          <div className="h-1 w-20 bg-sky-500 mx-auto rounded-full" />
+        </motion.div>
 
-        <div className="mb-10 flex flex-wrap justify-center gap-4">
-          {categories.map((cat, index) => (
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((cat) => (
             <button
-              key={index}
-              onClick={() => handleTabChange(cat)}
-              className={`px-4 py-2 rounded-full border transition font-medium
-                ${selectedCategory === cat
-                  ? 'bg-[#A35C7A] text-white dark:bg-[#C890A7]'
-                  : 'border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'}
-              `}
+              key={cat}
+              onClick={() => { setSelectedCategory(cat); setVisibleCount(3); }}
+              className={`px-6 py-2 rounded-full font-bold transition-all duration-300 border ${
+                selectedCategory === cat
+                  ? 'bg-sky-500 text-slate-950 border-sky-500 shadow-lg shadow-sky-500/20'
+                  : 'bg-transparent text-slate-400 border-slate-800 hover:border-slate-600'
+              }`}
             >
               {cat}
             </button>
           ))}
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {visibleProjects.map((project, idx) => (
-              <div
-                key={idx}
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <AnimatePresence mode="popLayout">
+            {visibleProjects.map((project, idx) => (
+              <motion.div
+                key={project.title}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
                 onClick={() => openModal(project)}
-                className="cursor-pointer 
-                  bg-[#cf909d] dark:bg-[#A35C7A] 
-                  text-[#212121] dark:text-[#FFFCFB]
-                  border border-[#e0d4d9] dark:border-[#C890A7] 
-                  p-4 rounded-xl shadow-md hover:shadow-lg transition"
+                className="group cursor-pointer glass-card rounded-2xl overflow-hidden flex flex-col glow-border"
               >
-              <img
-                src={project.images[0]}
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold text-[#212121] dark:text-[#FFFCFB]">{project.title}</h3>
-            </div>
-          ))}
-        </div>
+                <div className="relative overflow-hidden aspect-video">
+                  <img
+                    src={project.images[0]}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  </div>
+                </div>
+                
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-xl font-bold text-slate-100 group-hover:text-sky-400 transition-colors">
+                      {project.title}
+                    </h3>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-sky-500 bg-sky-500/10 px-2 py-1 rounded">
+                      {project.category}
+                    </span>
+                  </div>
+                  
+                  <p className="text-slate-400 text-sm mb-6 line-clamp-3">
+                    {project.description}
+                  </p>
+                  
+                  <div className="mt-auto flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 3).map((tech, i) => (
+                      <span key={i} className="text-[10px] font-mono text-slate-500">
+                        #{tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 3 && (
+                      <span className="text-[10px] font-mono text-slate-500">
+                        +{project.technologies.length - 3} more
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
 
         {visibleCount < filteredProjects.length && (
-          <button
-            onClick={() => setVisibleCount((prev) => prev + 3)}
-            className="mt-10 px-6 py-2 bg-[#A35C7A] text-white dark:bg-[#C890A7] rounded-full shadow hover:scale-105 transition-transform"
-          >
-            Load More
-          </button>
+          <div className="mt-16 text-center">
+            <button
+              onClick={() => setVisibleCount((prev) => prev + 3)}
+              className="px-8 py-3 bg-slate-900 text-slate-300 border border-slate-800 rounded-full font-bold hover:bg-slate-800 hover:text-white transition-all"
+            >
+              Load More Projects
+            </button>
+          </div>
         )}
       </div>
 
@@ -200,7 +231,7 @@ const Projects = () => {
           data={selectedProject} 
         />
       )}
-      </section>
+    </section>
   );
 };
 
