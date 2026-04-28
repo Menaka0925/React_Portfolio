@@ -47,7 +47,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center px-6 py-12 overflow-hidden bg-[#020617]"
+      className="relative min-h-screen flex items-center justify-center px-6 py-10 overflow-hidden bg-[#020617]"
     >
       {/* Cinematic Intro Flash */}
       <motion.div
@@ -73,7 +73,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between z-10">
         {/* Left Side Content - Swipe from Left */}
         <motion.div 
-          className="flex-1 max-w-2xl text-center lg:text-left mt-24 lg:mt-0"
+          className="flex-1 max-w-2xl text-center lg:text-left mt-12 lg:mt-0"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}

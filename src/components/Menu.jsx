@@ -20,12 +20,17 @@ const Menu = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+          // If the section is more than 30% visible in our focus area, make it active
+          if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
             setActive(entry.target.id);
           }
         });
       },
-      { threshold: 0.4 }
+      { 
+        // Focus on the top 40% of the screen where the user is looking
+        rootMargin: "-10% 0px -50% 0px",
+        threshold: [0.1, 0.3, 0.5] 
+      }
     );
 
     navItems.forEach(item => {
@@ -62,8 +67,10 @@ const Menu = () => {
 
                 <Link
                   to={item.to}
+                  spy={true}
                   smooth
                   duration={500}
+                  offset={-70}
                   onSetActive={() => setActive(item.to)}
                   onMouseEnter={() => setHovered(item.to)}
                   onMouseLeave={() => setHovered(null)}
@@ -102,8 +109,10 @@ const Menu = () => {
               <Link
                 key={item.to}
                 to={item.to}
+                spy={true}
                 smooth
                 duration={500}
+                offset={-70}
                 onSetActive={() => setActive(item.to)}
                 className="relative px-4 py-2 cursor-pointer flex items-center justify-center"
               >

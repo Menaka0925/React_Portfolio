@@ -26,7 +26,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 px-6 relative bg-[#020617] overflow-hidden select-none"
+      className="py-12 px-6 relative bg-[#020617] overflow-hidden select-none"
       onContextMenu={(e) => e.preventDefault()}
     >
       <div className="max-w-6xl mx-auto relative z-10">

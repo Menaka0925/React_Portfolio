@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectModal from './ProjectModal';
 import { inventoImg, searchImg, cyberImg, chatImg, notesImg, projectImg, analyticsImg, loanImg, ticketImg } from "../components/importimages";
 import portfolioImg from '../assets/pro_img/portfolio.jpg';
@@ -102,9 +102,23 @@ const allProjects = [
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(3);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [visibleCount, setVisibleCount] = useState(3);
+
+  // Dynamic Initial Count based on Device
+  useEffect(() => {
+    const getInitialCount = () => {
+      if (window.innerWidth >= 1024) return 3; // Desktop: 1 row of 3
+      if (window.innerWidth >= 768) return 4;  // Tablet: 2 rows of 2
+      return 3; // Mobile: 3 cards
+    };
+    setVisibleCount(getInitialCount());
+    
+    const handleResize = () => setVisibleCount(getInitialCount());
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [selectedCategory]); // Reset when category changes
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -215,7 +229,10 @@ const Projects = () => {
         {visibleCount < filteredProjects.length && (
           <div className="mt-16 text-center">
             <button
-              onClick={() => setVisibleCount((prev) => prev + 3)}
+              onClick={() => {
+                const increment = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 3;
+                setVisibleCount(prev => prev + increment);
+              }}
               className="px-8 py-3 bg-slate-900 text-slate-300 border border-slate-800 rounded-full font-bold hover:bg-slate-800 hover:text-white transition-all"
             >
               Load More Projects

@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="text-lg text-sky-500/80 group-hover:text-sky-400 transition-colors">
               <MdLocationOn />
             </div>
-            <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest text-right">Ariyalur, Tamil Nadu</span>
+            <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest text-right">Ariyalur, TN</span>
           </div>
         </div>
 

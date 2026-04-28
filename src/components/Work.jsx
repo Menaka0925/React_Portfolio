@@ -177,11 +177,18 @@ const Work = () => {
             <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}>
               <motion.path d={pathD} fill="none" stroke="rgba(56, 189, 248, 0.08)" strokeWidth="14" strokeLinecap="round" />
               <motion.path
-                d={pathD} fill="none" stroke="url(#mapGrad)" strokeWidth="4" strokeDasharray="14 14"
-                initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} transition={{ duration: 3 }}
+                d={pathD} 
+                fill="none" 
+                stroke="url(#questPathGrad)" 
+                strokeWidth="4" 
+                strokeDasharray="14 14"
+                initial={{ pathLength: 0 }} 
+                whileInView={{ pathLength: 1 }} 
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 2.5, ease: "easeInOut" }}
               />
               <defs>
-                <linearGradient id="mapGrad" x1="0" y1="0" x2="1" y2="0">
+                <linearGradient id="questPathGrad" x1="0" y1="0" x2="1" y2="0">
                   <stop offset="0%" stopColor="#38bdf8" /><stop offset="100%" stopColor="#818cf8" />
                 </linearGradient>
               </defs>
