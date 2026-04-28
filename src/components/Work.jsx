@@ -75,10 +75,8 @@ const workData = [
     duration: "Dec 2025 – Present",
     stack: ["React", "TypeScript", "Supabase"],
     details: [
-      "Working directly with founders and directors on the company’s main production platform and business-critical web applications.",
-      "Building and maintaining customer-facing product features and the main company website using React, TypeScript, and Supabase.",
-      "Handling frontend architecture, backend workflows, API integrations, and data flow optimization across product modules.",
-      "Resolving production issues, improving system usability, and supporting deployment and release workflows.",
+      "Collaborating directly with founders to build and maintain business-critical production features for the main platform and company website.",
+      "Architecting end-to-end workflows and optimizing data flow across product modules using React, TypeScript, and Supabase."
     ],
     isCurrent: true,
     icon: "05",
@@ -177,15 +175,10 @@ const Work = () => {
             <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}>
               <motion.path d={pathD} fill="none" stroke="rgba(56, 189, 248, 0.08)" strokeWidth="14" strokeLinecap="round" />
               <motion.path
-                d={pathD} 
-                fill="none" 
-                stroke="url(#questPathGrad)" 
-                strokeWidth="4" 
-                strokeDasharray="14 14"
-                initial={{ pathLength: 0 }} 
-                whileInView={{ pathLength: 1 }} 
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 2.5, ease: "easeInOut" }}
+                d={pathD}
+                fill="none"
+                stroke="url(#questPathGrad)"
+                strokeWidth="4"
               />
               <defs>
                 <linearGradient id="questPathGrad" x1="0" y1="0" x2="1" y2="0">
