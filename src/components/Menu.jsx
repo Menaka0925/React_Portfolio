@@ -8,8 +8,8 @@ const navItems = [
   { icon: AiFillHome, to: "home", label: "Home" },
   { icon: FaUserTie, to: "about", label: "About" },
   { icon: FaBriefcase, to: "experience", label: "Work" },
-  { icon: FaBook, to: "publications", label: "Publications" },
   { icon: FaCode, to: "projects", label: "Projects" },
+  { icon: FaBook, to: "publications", label: "Publications" },
 ];
 
 const Menu = () => {
