@@ -77,8 +77,8 @@ const Publications = () => {
               <div className="bg-slate-900/40 p-8 rounded-[2rem] border border-slate-800/50 hover:border-sky-500/30 transition-all duration-500 h-full flex flex-col relative overflow-hidden">
 
                 {/* Paper Number & Title */}
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-lg font-black">
+                <div className="flex items-start gap-4 mb-5">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-base font-black">
                     {String(idx + 1).padStart(2, '0')}
                   </div>
                   <h3 className="text-lg font-bold text-slate-200 group-hover:text-sky-400 transition-colors leading-snug tracking-tight">
@@ -87,12 +87,12 @@ const Publications = () => {
                 </div>
 
                 {/* Journal */}
-                <p className="text-[10px] text-slate-600 font-mono uppercase tracking-widest mb-6 leading-relaxed">
+                <p className="text-[10px] text-slate-600 font-mono uppercase tracking-widest mb-4 leading-relaxed">
                   {pub.journal}
                 </p>
 
                 {/* Teaser */}
-                <div className="mt-auto pt-6 border-t border-white/5">
+                <div className="mt-auto pt-4 border-t border-white/5">
                   <div className="flex items-center gap-2 text-slate-500 text-xs mb-4">
                     <FaQuoteLeft size={10} className="text-sky-500/50" />
                     <span className="italic">{pub.teaser}</span>
