@@ -129,7 +129,7 @@ const Hero = () => {
                 onClick={() => {
                   setResumeModal({ 
                     isOpen: true, 
-                    url: "https://drive.google.com/file/d/1wS4oJq6GG63KA4u0J1154uGv8Us_oqmm/view?usp=sharing",
+                    url: "https://drive.google.com/file/d/1DL-Ww64MGFDfFoRnG9Ocdo5Hq7W-267r/view?usp=sharing",
                     title: "Resume" 
                   });
                   trackEvent("RESUME_VIEW", "Resume");
