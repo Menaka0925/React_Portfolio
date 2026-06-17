@@ -72,7 +72,7 @@ const workData = [
     title: "Full Stack Developer",
     company: "Apt-Aura",
     location: "Remote",
-    duration: "Dec 2025 – Present",
+    duration: "Dec 2025 – May 2026",
     stack: ["React", "TypeScript", "Supabase"],
     details: [
       "Collaborating directly with founders to build and maintain business-critical production features for the main platform and company website.",
